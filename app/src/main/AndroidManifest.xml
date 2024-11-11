@@ -15,11 +15,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-<<<<<<< HEAD
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-=======
 
         </activity>
         <activity
@@ -28,23 +23,15 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
->>>>>>> 4473bd6 (first commit)
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
-<<<<<<< HEAD
-
-
-
-=======
         <activity
             android:name=".profileActivity"
             android:exported="true">
 
         </activity>
->>>>>>> 4473bd6 (first commit)
-
     </application>
 
 </manifest>
