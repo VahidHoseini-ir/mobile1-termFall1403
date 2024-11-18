@@ -16,6 +16,11 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String KEY_EDT_NAME = "KEY_EDT_NAME";
+    public static final String KEY_EDT_FAMILY = "KEY_EDT_FAMILY";
+    public static final String KEY_EDT_AGE = "KEY_EDT_AGE";
+    public static final String KEY_EDT_PROFILE = "KEY_EDT_PROFILE";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         EditText edt_family = findViewById(R.id.edt_family);
         EditText edt_age = findViewById(R.id.edt_age);
 
+        profileData profileData = new profileData();
+        profileData.setName("alireza");
+        profileData.setFamily("mohammadi");
+        profileData.setAddress("amirkavir");
+        profileData.setCity("12");
+        profileData.setAge("23");
+        profileData.setCountry("");
+
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,11 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 String text_edt_age = edt_age.getText().toString();
 
                 Intent intent3 = new Intent(MainActivity.this , profileActivity.class);
-                intent3.putExtra("key_text_edt_name", text_edt_name);
-                intent3.putExtra("key_text_edt_family", text_edt_family);
-                intent3.putExtra("key_text_edt_age", text_edt_age);
-
+//                intent3.putExtra(KEY_EDT_NAME, text_edt_name);
+//                intent3.putExtra(KEY_EDT_FAMILY, text_edt_family);
+//                intent3.putExtra(KEY_EDT_AGE, text_edt_age);
+                intent3.putExtra(KEY_EDT_PROFILE , profileData);
                 MainActivity.this.startActivity(intent3);
+
 
 
             }

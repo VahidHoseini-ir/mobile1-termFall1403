@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.MainActivity.KEY_EDT_PROFILE;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,13 +17,13 @@ public class profileActivity extends AppCompatActivity {
 
 
         Intent dataIntent = getIntent();
+        profileData profileDataActivity = dataIntent.getParcelableExtra(KEY_EDT_PROFILE);
+
         if(dataIntent != null){
-            Log.d("TAG", "key_text_edt_name     "+dataIntent.getStringExtra("key_text_edt_name"));
-            Log.d("TAG", "key_text_edt_family   "+dataIntent.getStringExtra("key_text_edt_family"));
-            Log.d("TAG", "key_text_edt_age      "+dataIntent.getStringExtra("key_text_edt_age"));
+            Log.d("TAG", "key_text_edt_name     "+profileDataActivity.getName());
+            Log.d("TAG", "key_text_edt_family   "+profileDataActivity.getFamily());
+            Log.d("TAG", "key_text_edt_age      "+profileDataActivity.getAge());
         }
-
-
 
     }
 }
